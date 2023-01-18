@@ -1,32 +1,21 @@
 <template>
   <div>
+    <NavButton />
     <div class="h-screen relative">
       <h1
         class="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-humongous font-bold transition-opacity select-none"
-        :style="`opacity: ${largeTextOpacity}`"
-      >
+        :style="`opacity: ${largeTextOpacity}`">
         about
       </h1>
-      <img
-        src="@/assets/images/table_stack.png"
-        alt=""
-        class="absolute left-1/2 top-1/10 h-9/10"
-        :style="`transform: translate(-50%, ${imgOffset}px); opacity: ${imgOpacity}`"
-      />
-      <h2
-        class="absolute left-1/2 top-3/4 -translate-x-1/2 text-white text-5xl font-medium select-none cursor-pointer"
-        :style="`opacity: ${textOpacity}`"
-      >
+      <img src="@/assets/images/table_stack.png" alt="" class="absolute left-1/2 top-1/10 h-9/10"
+        :style="`transform: translate(-50%, ${imgOffset}px); opacity: ${imgOpacity}`" />
+      <h2 class="absolute left-1/2 top-3/4 -translate-x-1/2 text-white text-5xl font-medium select-none cursor-pointer"
+        :style="`opacity: ${textOpacity}`">
         Scroll to continue
       </h2>
-      <div class="material-symbols-outlined fixed left-28 top-24 text-3xl">
-        apps
-      </div>
     </div>
-    <main
-      class="h-screen transition-opacity flex flex-col items-start justify-center gap-y-6 mx-52"
-      :style="`opacity: ${x > 0.7 ? 1 : 0}`"
-    >
+    <main class="h-screen transition-opacity flex flex-col items-start justify-center gap-y-6 mx-52"
+      :style="`opacity: ${x > 0.7 ? 1 : 0}`">
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. In debitis
         dolore officiis soluta! Labore laudantium quas totam, amet similique
@@ -56,9 +45,10 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted } from "vue";
+import NavButton from "@/components/NavButton.vue";
 
-let x: number = ref(0); // scroll progress (1 viewport height)
-let imgOffset: number = ref(0);
+let x = ref(0); // scroll progress (1 viewport height)
+let imgOffset = ref(0);
 const imgOpacity = computed(() => {
   return x.value > 0.3 ? 0 : 1 - (1 / 0.3) * x.value;
 });
