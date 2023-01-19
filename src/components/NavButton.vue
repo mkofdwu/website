@@ -1,18 +1,40 @@
 <template>
-  <div class="nav-bar fixed w-screen py-24 pl-1/2 flex flex-col gap-y-5 bg-almost-black z-10" :class="{ opened }">
-    <router-link to="/"
-      class="text-white text-4xl font-bold transition-opacity opacity-40 hover:opacity-100">Home</router-link>
-    <router-link to="/about"
-      class="text-white text-4xl font-bold transition-opacity opacity-40 hover:opacity-100">About</router-link>
-    <router-link to="/projects"
-      class="text-white text-4xl font-bold transition-opacity opacity-40 hover:opacity-100">Projects</router-link>
-    <router-link to="/contact"
-      class="text-white text-4xl font-bold transition-opacity opacity-40 hover:opacity-100">Contact</router-link>
+  <div
+    class="nav-bar fixed w-screen py-24 pl-1/2 flex flex-col gap-y-5 bg-almost-black z-10"
+    :class="{ opened }"
+  >
+    <router-link
+      to="/"
+      class="text-white text-4xl font-bold transition-opacity opacity-40 hover:opacity-100"
+      >Home</router-link
+    >
+    <router-link
+      to="/about"
+      class="text-white text-4xl font-bold transition-opacity opacity-40 hover:opacity-100"
+      >About</router-link
+    >
+    <router-link
+      to="/projects"
+      class="text-white text-4xl font-bold transition-opacity opacity-40 hover:opacity-100"
+      >Projects</router-link
+    >
+    <router-link
+      to="/contact"
+      class="text-white text-4xl font-bold transition-opacity opacity-40 hover:opacity-100"
+      >Contact</router-link
+    >
   </div>
-  <div class="fixed ml-28 mt-24 cursor-pointer w-fit z-20" @click="opened = !opened">
+  <div
+    class="fixed ml-24 mt-20 cursor-pointer w-fit z-20"
+    @click="opened = !opened"
+  >
     <div class="line" :class="{ opened }"></div>
     <div class="line line-2" :class="{ opened }"></div>
-    <div class="grid grid-cols-3 gap-1.5 transition-opacity" :class="{ fade: opened }">
+    <div
+      class="grid grid-cols-3 transition-opacity"
+      :class="{ fade: opened }"
+      style="gap: 5px"
+    >
       <div class="dot"></div>
       <div class="dot"></div>
       <div class="dot"></div>
@@ -25,8 +47,11 @@
     </div>
   </div>
   <span
-    class="fixed ml-44 text-white text-xl font-medium uppercase tracking-widest transition-opacity opacity-0 z-20 select-none"
-    :class="{ 'opacity-100': opened }" style="top: 5.875rem">Menu</span>
+    class="fixed ml-36 text-white text-xl font-medium uppercase tracking-widest transition-opacity opacity-0 z-20 select-none"
+    :class="{ 'opacity-100': opened }"
+    style="top: 4.875rem"
+    >Menu</span
+  >
 </template>
 
 <script setup lang="ts">
@@ -95,6 +120,6 @@ onUnmounted(() => {
 }
 
 .line.opened {
-  width: 1.8rem;
+  width: 1.7rem;
 }
 </style>
