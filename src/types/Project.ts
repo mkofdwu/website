@@ -3,7 +3,8 @@ export type Project = {
   title: string;
   description: string;
   tags: string;
+  coverImageSmall: string;
   images: string[];
-  siteUrl: string;
+  siteUrl: string | null;
   githubUrl: string;
 };

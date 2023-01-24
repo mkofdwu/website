@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <NavButton />
+  <nav-button />
+  <div class="flex flex-col">
     <div class="h-screen relative">
       <h1
         class="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-humongous font-bold transition-opacity select-none"
@@ -14,32 +14,39 @@
         Scroll to continue
       </h2>
     </div>
-    <main class="h-screen transition-opacity flex flex-col items-start justify-center gap-y-6 mx-52"
+    <div class="self-center w-1/2 h-screen transition-opacity flex flex-col items-start justify-center gap-y-6"
       :style="`opacity: ${x > 0.7 ? 1 : 0}`">
+      <h3 class="text-2xl font-medium">I'm a Year 6 student in NUS High</h3>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. In debitis
-        dolore officiis soluta! Labore laudantium quas totam, amet similique
-        deleniti accusantium error officia autem et cum odio eligendi eos maxime
-        adipisci dolorem nobis possimus! Expedita tempore laborum molestiae?
-        Accusamus necessitatibus officiis quam delectus ratione. Ab facilis
-        expedita animi temporibus qui tempore repudiandae modi itaque doloribus
-        quaerat laboriosam reiciendis quia distinctio iure voluptatibus, rem
-        odit, quam voluptate beatae harum aut sint aliquid molestias. Optio quod
-        nobis impedit ex ipsum minima cupiditate sed distinctio libero
-        perspiciatis quia, quis, voluptate temporibus iste numquam aliquam
-        repellat obcaecati architecto molestiae explicabo excepturi aliquid
-        placeat! Omnis!
+        I started programming in 2018, learning python from youtube tutorials
+        and creating my own text-based programs and games. I was immediately
+        captivated by the versatility of the language and what I could build
+        with it. Over the years, I've learned fullstack web development, gained
+        skills in machine learning and built apps with flutter.
       </p>
       <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis vero
-        maiores odio optio odit deleniti earum illum, sunt asperiores similique
-        possimus nemo impedit molestias assumenda fugit voluptas consectetur,
-        modi fuga cumque? Aliquam odit non iure? Explicabo, animi molestias!
-        Delectus animi eligendi iste doloremque nam iusto cupiditate quibusdam,
-        ullam corrupti. Dolorum.
+        Today, I am still looking to deepen my knowledge and explore new
+        technologies. I've recently delved into functional programming and have
+        gotten into CTFs.
       </p>
-      <p>This site was made with vue</p>
-    </main>
+      <p>Continue scrolling</p>
+    </div>
+    <div class="h-screen transition-opacity flex items-center justify-center mx-96"
+      :style="`opacity: ${x > 1.7 ? 1 : 0}`">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate
+        suscipit repellat, mollitia, recusandae labore facilis in sunt cumque
+        autem praesentium vel perspiciatis, voluptatem laborum. Dolor magnam
+        harum, minima in, delectus tenetur nam quo soluta necessitatibus numquam
+        ullam explicabo, debitis illo reiciendis unde officiis fuga sunt ea
+        ipsam maiores placeat omnis vitae. A ipsam fuga cupiditate, laborum
+        ratione qui quisquam fugiat laboriosam deleniti minus ab similique
+        beatae, id sapiente, vitae aliquid ad voluptate voluptatum minima autem
+        libero culpa. Maxime autem labore nemo! Consequatur optio id similique
+        ullam commodi ex dolorum consequuntur, dolorem qui error recusandae odio
+        quisquam? Nostrum velit consectetur ullam!
+      </p>
+    </div>
   </div>
 </template>
 

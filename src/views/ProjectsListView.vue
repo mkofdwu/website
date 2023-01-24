@@ -1,26 +1,14 @@
 <template>
   <div>
-    <NavButton />
-    <!-- <div class="flex items-center pl-32 py-24">
-      <div class="material-symbols-outlined mr-10">apps</div>
-      <h1 class="text-2xl font-medium uppercase tracking-wider">Projects</h1>
-    </div> -->
+    <nav-button />
     <h1
-      class="fixed w-screen flex items-center justify-center text-humongous font-bold transition-opacity select-none"
-      :style="`height: 90vh; opacity: ${largeTextOpacity}`"
-    >
+      class="fixed w-screen flex items-center justify-center text-humongous font-bold transition-opacity -z-10 select-none"
+      :style="`height: 90vh; opacity: ${largeTextOpacity}`">
       projects
     </h1>
     <div style="height: 90vh"></div>
-    <div
-      class="grid gap-x-12 gap-y-14 mx-32 mb-32"
-      style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr))"
-    >
-      <project-tile
-        v-for="project in projects"
-        :key="project.id"
-        :project="project"
-      />
+    <div class="grid gap-x-12 gap-y-14 mx-52 mb-32" style="grid-template-columns: repeat(auto-fit, minmax(360px, 1fr))">
+      <project-tile v-for="project in projects" :key="project.id" :project="project" />
     </div>
   </div>
 </template>
@@ -40,5 +28,3 @@ onMounted(() => {
   });
 });
 </script>
-
-<style scoped></style>
