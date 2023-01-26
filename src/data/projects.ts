@@ -36,7 +36,7 @@ export const projects: Project[] = [
       'An online chess application I made for my year 3 CS project. JavaFX is used to build the client application while Spring Boot is used to manage the backend. I used sockets to enable real time communication between the client and server, and MongoDB to store player and game data.',
     tags: 'JavaFX',
     coverImageSmall: javaChess0Sm,
-    images: [javaChess0],
+    images: [javaChess0, nushBookings0, thinkingCApp0],
     siteUrl: null,
     githubUrl: 'https://github.com/appventure-nush/thinking-capp',
   },

@@ -1,8 +1,23 @@
 <template>
   <div class="h-screen relative">
     <div class="flex flex-col items-center">
-      <img :src="project.images[0]" class="w-1/2 h-1/2 mt-16 mb-14 border object-cover cursor-pointer"
-        onclick="window.open(this.src, '_blank')" />
+      <div class="relative w-1/2 overflow-clip">
+        <div class="flex items-center transition-transform duration-500 cursor-zoom-in"
+          :style="`transform: translateX(-${carouselIndex}00%)`">
+          <img v-for="image in project.images" :key="image" :src="image" class="w-full h-1/2 mt-16 mb-14 object-cover"
+            onclick="window.open(this.src, '_blank')" />
+        </div>
+        <button
+          class="material-symbols-outlined w-8 h-8 rounded-full bg-white border grid place-items-center absolute left-5 top-1/2 -translate-y-1/2"
+          @click="carouselIndex--">
+          chevron_left
+        </button>
+        <button
+          class="material-symbols-outlined w-8 h-8 rounded-full bg-white border grid place-items-center absolute right-5 top-1/2 -translate-y-1/2"
+          @click="carouselIndex++">
+          chevron_right
+        </button>
+      </div>
       <div class="w-1/2 px-10 flex flex-col items-start mb-14">
         <span class="text-lg font-medium opacity-40 uppercase tracking-wider mb-2">
           {{ project.tags }}
@@ -36,10 +51,13 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from "vue";
 import { useRoute } from "vue-router";
 import { projects } from "@/data/projects";
 
 const route = useRoute();
 const thisId = parseInt(route.params.id as string);
 const project = projects[thisId];
+
+const carouselIndex = ref(0);
 </script>
