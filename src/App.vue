@@ -4,11 +4,11 @@ import { RouterView } from "vue-router";
 
 <template>
   <div>
-    <!-- <router-view :key="$route.path" /> -->
-    <router-view v-slot="{ Component, route }">
+    <router-view :key="$route.path" />
+    <!-- <router-view v-slot="{ Component, route }">
       <transition name="fade">
         <component :is="Component" :key="route.path" />
       </transition>
-    </router-view>
+    </router-view> -->
   </div>
 </template>

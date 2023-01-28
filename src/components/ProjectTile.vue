@@ -1,6 +1,6 @@
 <template>
   <router-link :to="`/project/${project.id}`" class="group flex flex-col items-start cursor-pointer">
-    <img :src="project.coverImageSmall"
+    <img :src="project.coverImage"
       class="w-full h-64 mb-6 object-cover transition-transform group-hover:-translate-y-2 group-hover:scale-102 group-hover:shadow-lg group-active:-translate-y-1 group-active:scale-101 group-active:shadow-sm outline outline-1 outline-offset-4 outline-transparent group-active:outline-black" />
     <span class="font-medium opacity-40 uppercase tracking-wider">
       {{ project.tags }}

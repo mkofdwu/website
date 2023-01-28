@@ -1,10 +1,12 @@
 import type { Project } from '@/types/Project';
-import nushBookings0Sm from '@/assets/images/nush-bookings-0-sm.png';
+import nushBookingsCover from '@/assets/images/nush-bookings-cover.png';
 import nushBookings0 from '@/assets/images/nush-bookings-0.png';
-import thinkingCApp0Sm from '@/assets/images/thinking-capp-0-sm.png';
+import thinkingCAppCover from '@/assets/images/thinking-capp-cover.png';
 import thinkingCApp0 from '@/assets/images/thinking-capp-0.png';
-import javaChess0Sm from '@/assets/images/JavaChess-0-sm.png';
+import javaChessCover from '@/assets/images/JavaChess-cover.png';
 import javaChess0 from '@/assets/images/JavaChess-0.png';
+// import discourseCover from '@assets/images/discourse-cover.png';
+import personalWebsiteCover from '@/assets/images/personal-website-cover.png';
 
 export const projects: Project[] = [
   {
@@ -13,7 +15,7 @@ export const projects: Project[] = [
     description:
       'A tour booking site I made for my schools open house. I was the team lead for this project. Built in vue with a firebase backend, the app offers a streamlined and carefully designed sign up procedure, as well as a separate admin panel for tour guides to view and edit the list of participants. To handle concurrent requests from around 3000 visitors, we designed an optimized database schema.',
     tags: 'Web dev',
-    coverImageSmall: nushBookings0Sm,
+    coverImage: nushBookingsCover,
     images: [nushBookings0],
     siteUrl: '',
     githubUrl: 'https://github.com/appventure-nush/nush-bookings',
@@ -24,7 +26,7 @@ export const projects: Project[] = [
     description:
       "A question-answer forum I'm building for my high school. It is available as a mobile app made with flutter, however I am rewriting the site in Vue to make it easily available on the web. This site has not been released.",
     tags: 'Flutter',
-    coverImageSmall: thinkingCApp0Sm,
+    coverImage: thinkingCAppCover,
     images: [thinkingCApp0],
     siteUrl: '',
     githubUrl: 'https://github.com/appventure-nush/thinking-capp',
@@ -35,7 +37,7 @@ export const projects: Project[] = [
     description:
       'An online chess application I made for my year 3 CS project. JavaFX is used to build the client application while Spring Boot is used to manage the backend. I used sockets to enable real time communication between the client and server, and MongoDB to store player and game data.',
     tags: 'JavaFX',
-    coverImageSmall: javaChess0Sm,
+    coverImage: javaChessCover,
     images: [javaChess0, nushBookings0, thinkingCApp0],
     siteUrl: null,
     githubUrl: 'https://github.com/appventure-nush/thinking-capp',
@@ -43,20 +45,22 @@ export const projects: Project[] = [
   {
     id: 3,
     title: 'discourse',
-    description: '',
+    description:
+      'A fully featured messaging app similar to WhatsApp. To increase privacy, email and password authentication is used instead of phone number, and users can customize permissions for different groups of friends. I originally created this app to gain a better understanding of flutter.',
     tags: 'Flutter',
-    coverImageSmall: nushBookings0Sm,
+    coverImage: nushBookingsCover,
     images: [nushBookings0],
     siteUrl: null,
     githubUrl: 'https://github.com/mkofdwu/discourse',
   },
   {
     id: 4,
-    title: 'this website',
-    description: 'My personal website',
+    title: 'personal website',
+    description:
+      "The website you are currently on. It's made in Vue.js 3 and tailwind css. You can check out the source code on GitHub.",
     tags: 'Web dev',
-    coverImageSmall: nushBookings0Sm,
-    images: [nushBookings0],
+    coverImage: personalWebsiteCover,
+    images: [personalWebsiteCover],
     siteUrl: null,
     githubUrl: 'https://github.com/mkofdwu/website',
   },

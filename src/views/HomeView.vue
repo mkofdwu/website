@@ -25,8 +25,10 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div>
-    <home-single />
-    <home-single />
-  </div>
+  <transition name="fade" appear>
+    <div>
+      <home-single />
+      <home-single />
+    </div>
+  </transition>
 </template>

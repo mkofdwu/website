@@ -1,16 +1,19 @@
 <template>
-  <div>
-    <nav-button />
-    <h1
-      class="fixed w-screen flex items-center justify-center text-humongous font-bold transition-opacity -z-10 select-none"
-      :style="`height: 90vh; opacity: ${largeTextOpacity}`">
-      projects
-    </h1>
-    <div style="height: 90vh"></div>
-    <div class="grid gap-x-12 gap-y-14 mx-52 mb-32" style="grid-template-columns: repeat(auto-fit, minmax(360px, 1fr))">
-      <project-tile v-for="project in projects" :key="project.id" :project="project" />
+  <transition name="fade" appear>
+    <div>
+      <nav-button />
+      <h1
+        class="fixed w-screen flex items-center justify-center text-humongous font-bold transition-opacity -z-10 select-none"
+        :style="`height: 90vh; opacity: ${largeTextOpacity}`">
+        projects
+      </h1>
+      <div style="height: 90vh"></div>
+      <div class="grid gap-x-12 gap-y-14 mx-52 mb-32"
+        style="grid-template-columns: repeat(auto-fit, minmax(360px, 1fr))">
+        <project-tile v-for="project in projects" :key="project.id" :project="project" />
+      </div>
     </div>
-  </div>
+  </transition>
 </template>
 
 <script setup lang="ts">
