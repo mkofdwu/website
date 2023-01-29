@@ -1,6 +1,9 @@
 import type { Project } from '@/types/Project';
 import nushBookingsCover from '@/assets/images/nush-bookings-cover.png';
 import nushBookings0 from '@/assets/images/nush-bookings-0.png';
+import nushBookings1 from '@/assets/images/nush-bookings-1.png';
+import nushBookings2 from '@/assets/images/nush-bookings-2.png';
+import nushBookings3 from '@/assets/images/nush-bookings-3.png';
 import thinkingCAppCover from '@/assets/images/thinking-capp-cover.png';
 import thinkingCApp0 from '@/assets/images/thinking-capp-0.png';
 import javaChessCover from '@/assets/images/JavaChess-cover.png';
@@ -16,7 +19,7 @@ export const projects: Project[] = [
       'A tour booking site I made for my schools open house. I was the team lead for this project. Built in vue with a firebase backend, the app offers a streamlined and carefully designed sign up procedure, as well as a separate admin panel for tour guides to view and edit the list of participants. To handle concurrent requests from around 3000 visitors, we designed an optimized database schema.',
     tags: 'Web dev',
     coverImage: nushBookingsCover,
-    images: [nushBookings0],
+    images: [nushBookings0, nushBookings1, nushBookings2, nushBookings3],
     siteUrl: '',
     githubUrl: 'https://github.com/appventure-nush/nush-bookings',
   },
