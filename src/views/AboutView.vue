@@ -30,12 +30,11 @@
           <h3 class="text-2xl font-medium">I'm a Year 6 student in NUS High</h3>
           <p>
             I started programming in 2018, learning python from youtube
-            tutorials and creating my own text-based programs and games. As my
-            interest in computer science grew, I constantly sought to both
-            broaden and deepen my understanding of this field. Over the years,
-            I’ve learned fullstack web development, gained skills in machine
-            learning and built apps with flutter. I’ve recently delved into
-            functional programming and have gotten into CTFs.
+            tutorials and creating my own text-based programs and games. Over
+            the years, I've learned fullstack web development, gained skills in
+            machine learning and built apps with flutter, and many more. I’ve
+            recently delved into functional programming and have gotten into
+            CTFs.
           </p>
           <p>Continue scrolling:</p>
         </div>
