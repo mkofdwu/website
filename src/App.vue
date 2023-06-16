@@ -1,14 +1,12 @@
 <script setup lang="ts">
-import { RouterView } from "vue-router";
+import { RouterView } from 'vue-router';
+import NavWrapper from './components/NavWrapper.vue';
 </script>
 
 <template>
   <div>
-    <router-view :key="$route.path" />
-    <!-- <router-view v-slot="{ Component, route }">
-      <transition name="fade">
-        <component :is="Component" :key="route.path" />
-      </transition>
-    </router-view> -->
+    <nav-wrapper>
+      <router-view :key="$route.path" />
+    </nav-wrapper>
   </div>
 </template>
