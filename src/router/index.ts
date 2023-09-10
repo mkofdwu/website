@@ -3,6 +3,8 @@ import HomeView from '@/views/HomeView.vue';
 import AboutView from '@/views/AboutView.vue';
 import ProjectsListView from '@/views/ProjectsListView.vue';
 import ProjectView from '@/views/ProjectView.vue';
+import WriteupWrapper from '@/views/WriteupWrapper.vue';
+import WriteupView from '@/views/WriteupView.vue';
 import ContactView from '@/views/ContactView.vue';
 
 const router = createRouter({
@@ -14,29 +16,44 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView,
+      component: HomeView
     },
     {
       path: '/about',
       name: 'about',
-      component: AboutView,
+      component: AboutView
     },
     {
       path: '/projects',
       name: 'projects',
-      component: ProjectsListView,
+      component: ProjectsListView
     },
     {
       path: '/project/:id',
       name: 'project',
-      component: ProjectView,
+      component: ProjectView
+    },
+    {
+      path: '/writeups',
+      redirect: '/writeups/frog-waf' // latest writeup
+    },
+    {
+      path: '/writeups/:slug',
+      component: WriteupWrapper,
+      children: [
+        {
+          path: '',
+          name: 'writeup',
+          component: WriteupView
+        }
+      ]
     },
     {
       path: '/contact',
       name: 'contact',
-      component: ContactView,
-    },
-  ],
+      component: ContactView
+    }
+  ]
 });
 
 export default router;

@@ -1,13 +1,13 @@
 <template>
   <transition name="fade" appear>
     <div ref="root" class="flex flex-col">
+      <h1
+        class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-humongous font-bold transition-opacity pointer-events-none"
+        :style="`opacity: ${largeTextOpacity}`"
+      >
+        about
+      </h1>
       <div class="h-screen relative">
-        <h1
-          class="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-humongous font-bold transition-opacity pointer-events-none"
-          :style="`opacity: ${largeTextOpacity}`"
-        >
-          about
-        </h1>
         <img
           src="@/assets/images/table_stack.png"
           alt=""

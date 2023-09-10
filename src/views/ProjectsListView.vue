@@ -2,8 +2,8 @@
   <transition name="fade" appear>
     <div ref="root">
       <h1
-        class="fixed w-screen flex items-center justify-center text-humongous font-bold pointer-events-none"
-        :style="`height: 90vh; opacity: ${largeTextOpacity}`"
+        class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-humongous font-bold pointer-events-none"
+        :style="`opacity: ${largeTextOpacity}`"
       >
         projects
       </h1>

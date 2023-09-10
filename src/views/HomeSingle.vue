@@ -21,7 +21,7 @@ import { RouterLink } from 'vue-router';
             ['/contact', 'contact']
           ]"
           :to="link"
-          class="text-2xl font-medium tracking-wide hover:text-primary transition-colors"
+          class="text-2xl font-medium tracking-wide hover:text-primary hover:tracking-wider transition-all"
         >
           {{ text }}
         </router-link>

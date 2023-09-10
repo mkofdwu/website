@@ -19,7 +19,7 @@ import GithubIcon from '@/components/icons/GithubIcon.vue';
           <div
             class="w-20 h-20 rounded-full bg-almost-black group-hover:bg-primary grid place-items-center mt-11 mb-4 transition-colors"
           >
-            <material-icon name="mail" class="text-white text-3xl" />
+            <i class="material-symbols-outlined text-white text-3xl">mail</i>
           </div>
           <span class="text-xl font-bold tracking-wide">email</span>
         </div>
