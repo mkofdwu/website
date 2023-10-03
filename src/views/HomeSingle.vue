@@ -20,6 +20,7 @@ import { RouterLink } from 'vue-router';
             ['/writeups', 'ctf writeups'],
             ['/contact', 'contact']
           ]"
+          :key="link"
           :to="link"
           class="text-2xl font-medium tracking-wide hover:text-primary hover:tracking-wider transition-all"
         >

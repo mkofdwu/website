@@ -12,7 +12,8 @@ export type ChalInfo = {
     | 'osint'
     | 'stego'
     | 'hardware'
-    | 'mobile';
+    | 'mobile'
+    | 'cloud';
   numSolves: number;
   numPoints: number;
   attachments: { name: string; url: string }[];

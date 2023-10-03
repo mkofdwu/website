@@ -1,17 +1,14 @@
-Level 1
-
-1. Examination
+# 1. Examination
 
 When I started on this challenge, one of the first things I did was run `strings challenge.img | grep TISC`. To my surprise, it yielded the following result: `TISC{w4s_th3r3_s0m3th1ng_l3ft_%s}`. I immediately submitted this flag only to realise that there was a second half.
 
 After running `file challenge.img` I realised that it was a linux ext4 filesystem dump of some sort, and searched online on how to mount the system. I ran `sudo mount -o loop challenge.img /mnt`, and `ls /mnt` showed that it was indeed a linux filesystem.
 
-Next, I tried to find the file where the text was from: `grep -r TISC /mnt`. However, this strangely yielded no results. I looked through the filesystem for quite some time but found nothing interesting, and then eventually speculated that the text could be in a deleted file.
-I tried various methods and commands including extundelete, and I could see there were indeed a few orphan nodes. However, these attempts were largely unsuccessful.
+Next, I tried to find the file where the text was from: `grep -r TISC /mnt`. However, this strangely yielded no results. I looked through the filesystem for quite some time but found nothing interesting, and then eventually speculated that the text could be in a deleted file. I tried various methods and commands including extundelete, and I could see there were indeed a few orphan nodes. However, I couldn't recover the file.
 
 Eventually, as I was looking at the strings output again, I noticed the lines before and after the partial flag were quite interesting.
 
-```
+```plaintext
 /lib/ld-musl-x86_64.so.1
 srand
 printf
@@ -36,7 +33,6 @@ double
 argc
 __libc_start_main
 long long int
-
 ```
 
 This looks like an elf binary, and sure enough, when I run strings on another elf binary it produced similar output.
@@ -45,7 +41,7 @@ Fortunately, it seems the file is stored on a contiguous chunk of memory, so I j
 
 To find the start of the file, I simply search for the elf magic number that comes before ‘TISC{‘:
 
-```:s.py
+```python:s.py
 with open('challenge.img', 'rb') as f:
     data = f.read()
 
@@ -55,8 +51,9 @@ start = data.rfind(b'\x7fELF', 0, i)
 
 To find the end index requires a bit more information from the header. https://stackoverflow.com/questions/2995347/how-can-i-find-the-size-of-a-elf-file-image-with-header-information tells me that I have to use the formula `e_shoff + (e_shnum * e_shentsize)`, and by referring to the header format specification table, I come up with the following code:
 
-```:s.py
-…
+```python:s.py
+...
+
 def to_int(b: bytes) -> int:
     return (b[1] << 8) + b[0]
 

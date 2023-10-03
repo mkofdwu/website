@@ -6,7 +6,7 @@ import NavWrapper from './components/NavWrapper.vue';
 <template>
   <div>
     <nav-wrapper>
-      <router-view :key="$route.path" />
+      <router-view />
     </nav-wrapper>
   </div>
 </template>

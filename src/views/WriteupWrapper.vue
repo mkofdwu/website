@@ -4,11 +4,13 @@ import { RouterView } from 'vue-router';
 </script>
 
 <template>
-  <div class="h-screen flex">
-    <writeups-side-bar />
-    <div class="w-px self-stretch my-5 bg-black bg-opacity-10"></div>
-    <div class="flex-1 overflow-x-hidden overflow-y-scroll">
-      <router-view />
+  <transition name="fade" appear>
+    <div class="h-screen flex">
+      <writeups-side-bar />
+      <div class="w-px self-stretch my-5 bg-black bg-opacity-10"></div>
+      <div class="flex-1 overflow-x-hidden overflow-y-scroll">
+        <router-view :key="$route.path" />
+      </div>
     </div>
-  </div>
+  </transition>
 </template>

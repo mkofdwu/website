@@ -35,7 +35,7 @@ const router = createRouter({
     },
     {
       path: '/writeups',
-      redirect: '/writeups/frog-waf' // latest writeup
+      redirect: '/writeups/disk-archaeology' // latest writeup
     },
     {
       path: '/writeups/:slug',

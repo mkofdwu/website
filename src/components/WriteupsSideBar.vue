@@ -3,8 +3,17 @@ import { RouterLink } from 'vue-router';
 
 const ctfs = [
   {
-    name: 'SekaiCTF 2023',
-    chals: [{ name: 'Frog WAF', slug: 'frog-waf' }]
+    name: 'TISC 2023',
+    chals: [
+      { name: 'Level 1', slug: 'disk-archaeology' },
+      { name: 'Level 2', slug: 'reckless-mistake' },
+      { name: 'Level 3', slug: 'kpa' },
+      { name: 'Level 4', slug: 'rubg' },
+      { name: 'Level 5', slug: 'palindromes-invitation' },
+      { name: 'Level 6', slug: 'the-chosen-ones' },
+      { name: 'Level 7', slug: 'devsecmeow' },
+      { name: 'Level 8', slug: 'blind-sql-injection' }
+    ]
   },
   {
     name: 'LITCTF 2023',
