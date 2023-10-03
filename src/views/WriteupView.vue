@@ -55,7 +55,8 @@ nextTick(() => {
 
 <style scoped>
 #article :deep(pre) {
-  overflow: auto;
+  /* overflow: auto; */
+  /* overflow: hidden; */
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
