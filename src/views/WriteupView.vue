@@ -45,16 +45,32 @@ nextTick(() => {
 </script>
 
 <template>
-  <div class="flex flex-col items-center py-20">
-    <div class="w-2/3">
+  <div class="writeup flex flex-col items-center py-20 max-md:py-10 max-sm:py-6">
+    <div class="w-2/3 max-xl:w-full max-xl:px-20 max-md:px-10 max-sm:px-6">
       <chal-info-card :info="chalInfo" class="mb-12" />
-      <div class="text-sm opacity-40 mx-10 mb-4">Posted {{ datePosted }}</div>
-      <div id="article" class="mx-10 flex flex-col gap-y-2" v-html="renderedMd"></div>
+      <div class="text-sm opacity-40 mx-10 mb-4 max-md:mx-6 max-sm:mx-0">
+        Posted {{ datePosted }}
+      </div>
+      <div
+        id="article"
+        class="mx-10 flex flex-col gap-y-2 max-md:mx-6 max-sm:mx-0"
+        v-html="renderedMd"
+      ></div>
     </div>
   </div>
 </template>
 
 <style scoped>
+#article :deep(::-webkit-scrollbar) {
+  display: block;
+  height: 8px;
+}
+
+#article :deep(::-webkit-scrollbar-thumb) {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
 #article :deep(pre) {
   /* overflow: auto; */
   /* overflow: hidden; */

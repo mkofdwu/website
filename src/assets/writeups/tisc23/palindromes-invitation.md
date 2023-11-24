@@ -103,7 +103,7 @@ async def on_ready():
 
 In the logs, I saw a few other participants had been granted the admin role by the BetterInvites bot. However, I was stuck here for a while and tried a bunch of other stuff before realising there were more invite links in the audit log.
 
-```
+```plaintext
 ...
 
 <AuditLogEntry id=1149538180668858448 action=AuditLogAction.invite_create user=<User id=1130165088788168858 name='palindromewow' global_name='PALINDROME' bot=False>>

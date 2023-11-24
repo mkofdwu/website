@@ -25,28 +25,17 @@ export const projects: Project[] = [
   },
   {
     id: 1,
-    title: 'thinking-capp',
-    description:
-      "A question-answer forum I'm building for my high school. It is available as a mobile app made with flutter, however I am rewriting the site in Vue to make it easily available on the web. This site has not been released.",
-    tags: 'flutter',
-    coverImage: thinkingCAppCover,
-    images: [thinkingCApp0],
-    siteUrl: '',
-    githubUrl: 'https://github.com/appventure-nush/thinking-capp'
-  },
-  {
-    id: 2,
     title: 'JavaChess',
     description:
       'An online chess application I made for my year 3 CS project. JavaFX is used to build the client application while Spring Boot is used to manage the backend. I used sockets to enable real time communication between the client and server, and MongoDB to store player and game data.',
     tags: 'javafx',
     coverImage: javaChessCover,
-    images: [javaChess0, nushBookings0, thinkingCApp0],
+    images: [javaChess0],
     siteUrl: null,
     githubUrl: 'https://github.com/appventure-nush/thinking-capp'
   },
   {
-    id: 3,
+    id: 2,
     title: 'discourse',
     description:
       'A fully featured messaging app similar to WhatsApp. To increase privacy, email and password authentication is used instead of phone number, and users can customize permissions for different groups of friends. I originally created this app to gain a better understanding of flutter.',
@@ -57,7 +46,7 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/mkofdwu/discourse'
   },
   {
-    id: 4,
+    id: 3,
     title: 'personal website',
     description:
       "The website you are currently on. It's made in Vue.js 3 and tailwind css. You can check out the source code on GitHub.",
@@ -67,4 +56,15 @@ export const projects: Project[] = [
     siteUrl: '/',
     githubUrl: 'https://github.com/mkofdwu/website'
   }
+  // {
+  //   id: 1,
+  //   title: 'thinking-capp',
+  //   description:
+  //     "A question-answer forum I'm building for my high school. It is available as a mobile app made with flutter, however I am rewriting the site in Vue to make it easily available on the web. This site has not been released.",
+  //   tags: 'flutter',
+  //   coverImage: thinkingCAppCover,
+  //   images: [thinkingCApp0],
+  //   siteUrl: '',
+  //   githubUrl: 'https://github.com/appventure-nush/thinking-capp'
+  // },
 ];

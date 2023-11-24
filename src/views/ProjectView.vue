@@ -16,14 +16,14 @@
         </div>
         <button
           v-if="carouselIndex > 0"
-          class="material-symbols-outlined w-8 h-8 rounded-full bg-white border grid place-items-center absolute left-5 top-1/2 -translate-y-1/2"
+          class="material-symbols-outlined w-8 h-8 rounded-full bg-white border grid place-items-center absolute left-5 top-1/2 -translate-y-1/2 transition-transform hover:scale-110"
           @click="carouselIndex--"
         >
           chevron_left
         </button>
         <button
           v-if="carouselIndex < project.images.length - 1"
-          class="material-symbols-outlined w-8 h-8 rounded-full bg-white border grid place-items-center absolute right-5 top-1/2 -translate-y-1/2"
+          class="material-symbols-outlined w-8 h-8 rounded-full bg-white border grid place-items-center absolute right-5 top-1/2 -translate-y-1/2 transition-transform hover:scale-110"
           @click="carouselIndex++"
         >
           chevron_right
@@ -78,7 +78,7 @@
       <span class="material-symbols-outlined mr-3">chevron_left</span>
       back to projects
     </router-link>
-    <div class="fixed top-24 right-24 flex flex-col items-end gap-y-3">
+    <!-- <div class="fixed top-24 right-24 flex flex-col items-end gap-y-3">
       <router-link
         v-for="project in projects"
         :key="project.id"
@@ -88,7 +88,7 @@
         :class="project.id === thisId ? 'opacity-100' : 'opacity-40'"
         >{{ project.title }}</router-link
       >
-    </div>
+    </div> -->
   </div>
 </template>
 
