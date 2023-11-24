@@ -2,7 +2,7 @@ export type ChalInfo = {
   title: string;
   subtitle: string;
   description: string;
-  cat:
+  cats: (
     | 'web'
     | 'misc'
     | 'crypto'
@@ -13,7 +13,8 @@ export type ChalInfo = {
     | 'stego'
     | 'hardware'
     | 'mobile'
-    | 'cloud';
+    | 'cloud'
+  )[];
   numSolves: number;
   numPoints: number;
   attachments: { name: string; url: string }[];

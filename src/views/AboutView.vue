@@ -33,13 +33,25 @@
           <span class="text-primary">UI design</span>.
         </p>
       </div>
-      <div class="grid"></div>
+      <img
+        src="@/assets/images/resume.png"
+        class="self-center w-1/2 rounded-3xl mb-20 shadow-2xl"
+      />
+      <a
+        href="/resume.pdf"
+        target="_blank"
+        class="self-center h-16 pl-6 pr-7 mb-20 bg-almost-black rounded-full flex items-center hover:bg-primary transition-all"
+      >
+        <material-icon name="download" class="text-white mr-4" />
+        <span class="text-white text-xl font-medium">Download resume</span>
+      </a>
     </div>
   </transition>
 </template>
 
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue';
+import MaterialIcon from '@/components/MaterialIcon.vue';
 
 const root = ref<HTMLDivElement | null>(null);
 let x = ref(0); // scroll progress (1 viewport height)

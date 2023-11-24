@@ -16,16 +16,16 @@ import blindSqlInjection from '@/assets/writeups/tisc23/blind-sql-injection.md?r
 import ChalInfoCard from '@/components/ChalInfoCard.vue';
 import { chals } from '@/data/writeups';
 
-const writeups: { [slug: string]: string } = {
-  'the-other-obligatory-pyjail': theOtherObligatoryPyjail,
-  'disk-archaeology': diskArchaeology,
-  'reckless-mistake': recklessMistake,
-  kpa: kpa,
-  rubg: rubg,
-  'palindromes-invitation': palindromesInvitation,
-  'the-chosen-ones': theChosenOnes,
-  devsecmeow: devSecMeow,
-  'blind-sql-injection': blindSqlInjection
+const writeups: { [slug: string]: { md: string; datePosted: string } } = {
+  'the-other-obligatory-pyjail': { md: theOtherObligatoryPyjail, datePosted: '11 Sep 2023' },
+  'disk-archaeology': { md: diskArchaeology, datePosted: '3 Oct 2023' },
+  'reckless-mistake': { md: recklessMistake, datePosted: '3 Oct 2023' },
+  kpa: { md: kpa, datePosted: '3 Oct 2023' },
+  rubg: { md: rubg, datePosted: '3 Oct 2023' },
+  'palindromes-invitation': { md: palindromesInvitation, datePosted: '3 Oct 2023' },
+  'the-chosen-ones': { md: theChosenOnes, datePosted: '3 Oct 2023' },
+  devsecmeow: { md: devSecMeow, datePosted: '3 Oct 2023' },
+  'blind-sql-injection': { md: blindSqlInjection, datePosted: '3 Oct 2023' }
 };
 
 const { slug } = useRoute().params;
@@ -35,8 +35,9 @@ if (typeof slug !== 'string' || !(slug in chals)) {
 
 const chalInfo = chals[slug as string];
 
-const md = new MarkdownIt().use(namedCodeBlocks);
-let content = md.render(writeups[slug as string]);
+const mdIt = new MarkdownIt().use(namedCodeBlocks);
+const { md, datePosted } = writeups[slug as string];
+let renderedMd = mdIt.render(md);
 
 nextTick(() => {
   hljs.highlightAll();
@@ -47,8 +48,8 @@ nextTick(() => {
   <div class="flex flex-col items-center py-20">
     <div class="w-2/3">
       <chal-info-card :info="chalInfo" class="mb-12" />
-      <div class="text-sm opacity-40 mx-10 mb-4">Posted 9 Sep 2023</div>
-      <div id="article" class="mx-10 flex flex-col gap-y-2" v-html="content"></div>
+      <div class="text-sm opacity-40 mx-10 mb-4">Posted {{ datePosted }}</div>
+      <div id="article" class="mx-10 flex flex-col gap-y-2" v-html="renderedMd"></div>
     </div>
   </div>
 </template>

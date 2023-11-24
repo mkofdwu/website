@@ -6,7 +6,7 @@ export const chals: { [slug: string]: ChalInfo } = {
     subtitle: 'Author: quasar',
     description:
       'nowadays, setattr jails seem to be all the hype, and everyone loves builtins, so enjoy a setattr jail with builtins :>',
-    cat: 'misc',
+    cats: ['misc'],
     numSolves: 6,
     numPoints: 400,
     attachments: [
@@ -28,7 +28,7 @@ You will be provided with the following file:
 Notes:
 - challenge.tar.xz decompresses into challenge.img
 - FLAG FORMAT is TISC{<some text you have to find>}`,
-    cat: 'forensics',
+    cats: ['forensics'],
     numSolves: 327,
     numPoints: 0,
     attachments: [
@@ -43,7 +43,7 @@ Notes:
     title: "XIPHEREHPIX's Reckless Mistake",
     subtitle: 'TISC Level 2',
     description: `Our sources told us that one of PALINDROME's lieutenants, XIPHEREHPIX, wrote a special computer program for certain members of PALINDROME. We have somehow managed to get a copy of the source code and the compiled binary. The intention of the program is unclear, but we think encrypted blob inside the program could contain a valuable secret.`,
-    cat: 'crypto',
+    cats: ['crypto'],
     numSolves: 140,
     numPoints: 0,
     attachments: [
@@ -62,7 +62,7 @@ Notes:
     title: 'KPA',
     subtitle: 'TISC Level 3',
     description: `We've managed to grab an app from a suspicious device just before it got reset! The copying couldn't finish so some of the last few bytes got corrupted... But not all is lost! We heard that the file shouldn't have any comments in it! Help us uncover the secrets within this app!`,
-    cat: 'mobile',
+    cats: ['mobile'],
     numSolves: 86,
     numPoints: 0,
     attachments: [
@@ -96,7 +96,7 @@ You will be provided with the following:
 2) Linux Client (.AppImage)
     - Please install fuse before running, you can do "sudo apt install -y fuse"
     - Tested to work on Ubuntu 22.04 LTS`,
-    cat: 'misc',
+    cats: ['pwn', 'misc'],
     numSolves: 79,
     numPoints: 0,
     attachments: [
@@ -117,7 +117,7 @@ You will be provided with the following:
     description: `Valuable intel suggests that PALINDROME has established a secret online chat room for their members to discuss on plans to invade Singapore's cyber space. One of their junior developers accidentally left a repository public, but he was quick enough to remove all the commit history, only leaving some non-classified files behind. One might be able to just dig out some secrets of PALINDROME and get invited to their secret chat room...who knows?
 
 Start here: https://github.com/palindrome-wow/PALINDROME-PORTAL`,
-    cat: 'misc',
+    cats: ['osint', 'misc'],
     numSolves: 58,
     numPoints: 0,
     attachments: [],
@@ -129,7 +129,7 @@ Start here: https://github.com/palindrome-wow/PALINDROME-PORTAL`,
     description: `We have discovered PALINDROME's recruitment site. Infiltrate it and see what you can find!
 
 http://chals.tisc23.ctf.sg:51943`,
-    cat: 'web',
+    cats: ['web'],
     numSolves: 52,
     numPoints: 0,
     attachments: [],
@@ -143,7 +143,7 @@ http://chals.tisc23.ctf.sg:51943`,
 https://d3mg5a7c6anwbv.cloudfront.net/
 
 Note: Concatenate flag1 and flag2 to form the flag for submission.`,
-    cat: 'cloud',
+    cats: ['cloud'],
     numSolves: 28,
     numPoints: 0,
     attachments: [],
@@ -159,7 +159,7 @@ Note: Concatenate flag1 and flag2 to form the flag for submission.`,
 You ready your fingers on the keyboard, confident that you'll be able to deliver.
 
 http://chals.tisc23.ctf.sg:28471/`,
-    cat: 'cloud',
+    cats: ['web', 'rev', 'pwn', 'cloud'],
     numSolves: 18,
     numPoints: 0,
     attachments: [

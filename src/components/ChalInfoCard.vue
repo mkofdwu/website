@@ -6,10 +6,14 @@ defineProps<{ info: ChalInfo }>();
 
 const catIcons: { [cat: string]: string } = {
   web: 'language',
+  pwn: 'bug_report',
+  rev: 'keyboard_double_arrow_left',
   misc: 'help',
   forensics: 'fingerprint',
   crypto: 'key',
-  cloud: 'cloud'
+  mobile: 'phone_android',
+  cloud: 'cloud',
+  osint: 'visibility'
 };
 </script>
 
@@ -21,9 +25,13 @@ const catIcons: { [cat: string]: string } = {
     <span class="text-sm opacity-60 mb-6">{{ info.subtitle }}</span>
     <p class="mb-6 whitespace-pre-wrap">{{ info.description }}</p>
     <div class="flex">
-      <div class="h-9 bg-black bg-opacity-10 rounded-full flex items-center mr-3">
-        <material-icon sm :name="catIcons[info.cat]!" class="ml-3 mr-2" />
-        <span class="mr-4">{{ info.cat }}</span>
+      <div
+        v-for="(cat, i) in info.cats"
+        :key="i"
+        class="h-9 bg-black bg-opacity-10 rounded-full flex items-center mr-3"
+      >
+        <material-icon sm :name="catIcons[cat]!" class="ml-3 mr-2" />
+        <span class="mr-4">{{ cat }}</span>
       </div>
       <div class="h-9 bg-black bg-opacity-10 rounded-full px-5 flex items-center">
         <span class="mr-4">{{ info.numSolves }} solves</span>
