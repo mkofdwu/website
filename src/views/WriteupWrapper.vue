@@ -5,7 +5,7 @@ import { RouterView } from 'vue-router';
 
 <template>
   <transition name="fade" appear>
-    <div class="h-full flex">
+    <div class="h-full flex overflow-hidden">
       <writeups-side-bar />
       <div class="w-px self-stretch my-5 bg-black bg-opacity-10"></div>
       <main class="flex-1 overflow-x-hidden overflow-y-scroll">

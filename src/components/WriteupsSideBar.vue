@@ -23,7 +23,7 @@ const ctfs = [
 </script>
 
 <template>
-  <div class="w-80 flex flex-col pt-24">
+  <div class="w-80 flex flex-col pt-24 overflow-auto">
     <div class="flex flex-col mb-10">
       <router-link
         to="/writeups/overview"
