@@ -27,7 +27,7 @@
         :style="`opacity: ${x > 0.7 ? 1 : 0}`"
       >
         <p>
-          I am a Year 6 student from NUS High who enjoys
+          I am a recently graduated student from NUS High who enjoys
           <span class="text-primary">software engineering</span> and playing
           <span class="text-primary">CTFs</span>. I also like to do
           <span class="text-primary">UI design</span>.

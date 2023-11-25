@@ -7,9 +7,7 @@ import { RouterLink } from 'vue-router';
     <main class="flex justify-center py-20" style="height: 70vh">
       <div class="w-96 flex flex-col items-end justify-center mr-24">
         <h1 class="text-7.5xl font-bold mb-5">Jia Jie</h1>
-        <p class="text-xl text-right">
-          NUS High student studying Computer Science and Cybersecurity
-        </p>
+        <p class="text-xl text-right">CS major studying software engineering and cybersecurity</p>
       </div>
       <div class="w-px bg-black opacity-10 mr-20"></div>
       <div class="w-96 flex flex-col items-start justify-center gap-6">
