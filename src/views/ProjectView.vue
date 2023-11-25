@@ -46,7 +46,7 @@
         </div>
       </div>
       <div class="w-1/2 px-10 flex flex-col items-start mb-14">
-        <span class="text-lg font-medium opacity-40 tracking-wide mb-1">
+        <span class="text-lg font-medium opacity-40 tracking-wide uppercase">
           {{ project.tags }}
         </span>
         <h3 class="text-[1.75rem] font-bold mb-5">{{ project.title }}</h3>
