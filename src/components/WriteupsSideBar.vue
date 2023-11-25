@@ -23,7 +23,20 @@ const ctfs = [
 </script>
 
 <template>
-  <div class="w-80 flex flex-col pt-30">
+  <div class="w-80 flex flex-col pt-24">
+    <div class="flex flex-col mb-10">
+      <router-link
+        to="/writeups/overview"
+        class="w-72 h-12 rounded-r-full flex items-center pl-10 transition-colors"
+        :class="
+          $route.path === '/writeups/overview'
+            ? 'bg-primary bg-opacity-10 text-primary font-medium'
+            : 'hover:bg-black hover:bg-opacity-5'
+        "
+      >
+        Overview & awards
+      </router-link>
+    </div>
     <div v-for="ctf in ctfs" :key="ctf.name" class="flex flex-col mb-10">
       <span class="text-sm font-bold opacity-40 uppercase ml-10 mb-3">{{ ctf.name }}</span>
       <router-link
