@@ -38,7 +38,7 @@
         class="self-center w-1/2 rounded-3xl mb-20 shadow-2xl"
       />
       <a
-        href="https://drive.google.com/file/d/1c3LI3Tr5BNyI2un1vr1UM3HzA-Mug2OJ/view?usp=sharing"
+        href="https://drive.google.com/file/d/1gQlGpDbUECPaSgk7DtzeRF83sM1mPe0O/view?usp=sharing"
         target="_blank"
         class="self-center h-16 pl-6 pr-7 mb-20 bg-almost-black rounded-full flex items-center hover:bg-primary transition-all"
       >
