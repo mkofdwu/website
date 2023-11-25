@@ -8,14 +8,19 @@
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "deploy-surge": "npm run build && mv dist/index.html dist/200.html && surge dist jiajie.surge.sh"
   },
   "dependencies": {
+    "highlight.js": "^11.8.0",
+    "markdown-it": "^13.0.1",
+    "markdown-it-named-code-blocks": "^0.2.0",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.4",
+    "@types/markdown-it": "^13.0.1",
     "@types/node": "^18.11.12",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vue/eslint-config-prettier": "^7.0.0",

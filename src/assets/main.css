@@ -43,3 +43,9 @@
 .fade-leave-to {
   opacity: 0;
 }
+
+/* image fade in on load */
+.img-fade-in {
+  opacity: 0;
+  transition: opacity 600ms ease;
+}

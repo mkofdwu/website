@@ -1,27 +1,35 @@
 <script setup lang="ts">
-import { RouterLink } from "vue-router";
+import { RouterLink } from 'vue-router';
 </script>
 
 <template>
-  <main class="flex" style="height: 80vh">
-    <div class="flex-1 flex flex-col items-start justify-center pl-32 pr-48">
-      <h1 class="text-9xl font-bold uppercase mb-8">Jia Jie</h1>
-      <p class="text-base">NUS High student studying CS. Slave to the grind.</p>
-    </div>
-    <div class="flex-1 flex flex-col items-start justify-center gap-10 pl-32">
-      <router-link to="/about"
-        class="text-xl font-medium uppercase tracking-wider hover:tracking-hover active:tracking-normal active:opacity-60 transition-all">
-        About
-      </router-link>
-      <router-link to="/projects"
-        class="text-xl font-medium uppercase tracking-wider hover:tracking-hover active:tracking-normal active:opacity-60 transition-all">
-        Projects
-      </router-link>
-      <router-link to="/contact"
-        class="text-xl font-medium uppercase tracking-wider hover:tracking-hover active:tracking-normal active:opacity-60 transition-all">
-        Contact
-      </router-link>
-    </div>
-  </main>
-  <img src="@/assets/images/me.jpg" class="w-full saturate-50" />
+  <div class="flex flex-col">
+    <main class="flex justify-center py-20" style="height: 70vh">
+      <div class="w-96 flex flex-col items-end justify-center mr-24">
+        <h1 class="text-7.5xl font-bold mb-5">Jia Jie</h1>
+        <p class="text-xl text-right">CS major studying software engineering and cybersecurity</p>
+      </div>
+      <div class="w-px bg-black opacity-10 mr-20"></div>
+      <div class="w-96 flex flex-col items-start justify-center gap-6">
+        <router-link
+          v-for="[link, text] in [
+            ['/about', 'about'],
+            ['/projects', 'projects'],
+            ['/writeups', 'ctf writeups'],
+            ['/contact', 'contact']
+          ]"
+          :key="link"
+          :to="link"
+          class="text-2xl font-medium tracking-wide hover:text-primary hover:tracking-wider transition-all"
+        >
+          {{ text }}
+        </router-link>
+      </div>
+    </main>
+    <img
+      src="@/assets/images/me.jpg"
+      class="img-fade-in saturate-50 mx-6 rounded-4xl"
+      onload="this.style.opacity = 1"
+    />
+  </div>
 </template>
