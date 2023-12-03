@@ -9,7 +9,7 @@
       v-else
       class="w-full h-64 rounded-2xl mb-6 bg-almost-black-lighter grid place-items-center"
     >
-      <MaterialIcon name="question_mark" class="text-7xl text-white" />
+      <MaterialIcon name="question_mark" size="text-7xl" class="text-white" />
     </div>
     <div class="mx-2 flex items-center justify-between">
       <div class="flex flex-col items-start">

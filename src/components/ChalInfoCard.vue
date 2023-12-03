@@ -30,7 +30,7 @@ const catIcons: { [cat: string]: string } = {
         :key="i"
         class="h-9 bg-black bg-opacity-10 rounded-full flex items-center mr-3"
       >
-        <material-icon sm :name="catIcons[cat]!" class="ml-3 mr-2" />
+        <material-icon :name="catIcons[cat]!" size="text-xl" class="ml-3 mr-2" />
         <span class="mr-4">{{ cat }}</span>
       </div>
       <div class="h-9 bg-black bg-opacity-10 rounded-full px-5 flex items-center">

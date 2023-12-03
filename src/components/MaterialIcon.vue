@@ -1,7 +1,7 @@
 <script setup lang="ts">
-defineProps<{ name: string; sm?: boolean }>();
+defineProps<{ name: string; size?: string }>();
 </script>
 
 <template>
-  <i class="material-symbols-outlined" :class="sm ? 'text-xl' : 'text-2xl'">{{ name }}</i>
+  <i class="material-symbols-outlined" :class="size ?? 'text-2xl'">{{ name }}</i>
 </template>

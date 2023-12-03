@@ -14,6 +14,7 @@ import CTFAwardTile from '@/components/CTFAwardTile.vue';
     <div class="grid gap-8" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))">
       <CTFAwardTile imageUrl="/cddc.jpg" title="CDDC 2023" award="1st place" is-first />
       <CTFAwardTile imageUrl="/aycep.jpg" title="AYCEP 2023" award="1st place" is-first />
+      <CTFAwardTile imageUrl="/blahaj.png" title="BlahajCTF 2023" award="1st place" is-first />
       <CTFAwardTile imageUrl="/cyberthon.jpg" title="Cyberthon 2023" award="3rd place" />
       <CTFAwardTile
         imageUrl="https://instagram.fsin4-1.fna.fbcdn.net/v/t39.30808-6/391630768_296639796467663_9052451824086746302_n.jpg?stp=dst-jpg_e15&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMDgweDEwODAuc2RyIn0&_nc_ht=instagram.fsin4-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=S_wdILUjSXMAX9BZTFT&edm=ACWDqb8AAAAA&ccb=7-5&ig_cache_key=MzIxNzU0OTAyNTA0NTQ4ODE3MQ%3D%3D.2-ccb7-5&oh=00_AfDbUWCFMhciozl9kAyKgl54D3UhETqyEIAl-2dXzAo0tQ&oe=65670BEB&_nc_sid=ee9879"
